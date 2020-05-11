@@ -14,9 +14,9 @@ class Spider {
 
   async init() {
     const browser = await puppeteer.launch({
-      headless: false,
+      headless: true,
       // ignoreDefaultArgs: true,
-      pipe: true,
+      // pipe: true,
       args: [
         //--flag-switches-begin
         //--enable-features=ExperimentalProductivityFeatures,LazyFrameLoading,LazyImageLoading,ParallelDownloading,TabGroups,TabHoverCards
