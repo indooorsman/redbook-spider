@@ -121,7 +121,7 @@ class Spider {
 </body>    
 </html>
     `;
-    fs.writeFileSync('./out/index.html', html, { encoding: 'utf8' });
+    fs.writeFileSync('./index.html', html, { encoding: 'utf8' });
     await this.page.browser().close();
   }
 }
