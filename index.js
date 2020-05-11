@@ -111,9 +111,10 @@ class Spider {
 </thead>
 <tbody>
   ${this.videos.map(v => {
-      const paths = v.link.replace('https://', '').split('/');
+    // https://www.xiaohongshu.com/discovery/item/5eaced4900000000010010ac
+      const paths = v.link.replace('https://', '').split('/discovery/');
       paths.shift();
-      const url = `https://www.xiaohongshu.com/${paths.join('/')}`;
+      const url = `https://www.xiaohongshu.com/${paths.join('/discovery/')}`;
       return `<tr><td>${v.author}</td><td>${v.title}</td><td><img src="${v.cover}"/></td><td><a target="_blank" href="${url}">${url}</a></td></tr>`;
     }).join('')}
 </tbody>
